@@ -10,8 +10,17 @@ import 'package:myclassprojectpractice/screens/practice_26_7_24/buttons.dart';
 import 'package:myclassprojectpractice/screens/practice_26_7_24/task.dart';
 import 'package:myclassprojectpractice/screens/practice_29_7_2024/widgetsPractice.dart';
 import 'package:myclassprojectpractice/screens/practice_31_7_2024/login_screen_ui.dart';
+import 'package:myclassprojectpractice/screens/practice_8_1_2024/google_fonts.dart';
+import 'package:myclassprojectpractice/screens/practice_8_3_2024/home_screen.dart';
+import 'package:myclassprojectpractice/screens/practice_8_3_2024/login_screen1.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+late SharedPreferences prefObj;
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  prefObj = await SharedPreferences.getInstance();
+  print("this is the value of login in main : ${prefObj.getBool("isLogin")}");
   runApp(const MyApp());
 }
 
@@ -31,7 +40,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreen1(),
+      home: prefObj.getBool("isLogin") != null && prefObj.getBool("isLogin") == true ? HomeScreen3() : LoginScreen2(),
       
     );
   }
