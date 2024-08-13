@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myclassprojectpractice/APIs/get_api_without_model.dart';
 import 'package:myclassprojectpractice/APIs/practice_8_12_2024/api_hit_screen.dart';
+import 'package:myclassprojectpractice/APIs/practice_8_13_2024/login_screen_4.dart';
+import 'package:myclassprojectpractice/APIs/practice_8_13_2024/update_api.dart';
 import 'package:myclassprojectpractice/screens/practice25_7_2024/Home.dart';
 import 'package:myclassprojectpractice/screens/practice_30_7_2024/grid_view_practice.dart';
 import 'package:myclassprojectpractice/screens/practice_30_7_2024/homescreen.dart';
@@ -42,7 +44,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: UiAfterHittingApi(),
+      home: UpdateApi(),
       //prefObj.getBool("isLogin") != null && prefObj.getBool("isLogin") == true ? HomeScreen3() : LoginScreen2(),
       
     );
