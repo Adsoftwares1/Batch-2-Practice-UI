@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:myclassprojectpractice/main.dart';
-import 'package:myclassprojectpractice/screens/practice_31_7_2024/login_screen_ui.dart';
-import 'package:myclassprojectpractice/screens/practice_8_3_2024/login_screen1.dart';
+import 'package:myclassprojectpractice/old_work/screens/practice_31_7_2024/login_screen_ui.dart';
+import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/login_screen1.dart';
 
 class HomeScreen3 extends StatefulWidget {
   const HomeScreen3({super.key});

@@ -1,7 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myclassprojectpractice/screens/practice_24_7_2024/setes_practice.dart';
+import 'package:myclassprojectpractice/old_work/screens/practice_24_7_2024/setes_practice.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({super.key});

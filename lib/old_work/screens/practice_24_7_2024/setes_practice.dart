@@ -3,8 +3,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myclassprojectpractice/screens/practice_24_7_2024/screen2.dart';
-import 'package:myclassprojectpractice/screens/practice_26_7_24/buttons.dart';
+import 'package:myclassprojectpractice/old_work/screens/practice_24_7_2024/screen2.dart';
+import 'package:myclassprojectpractice/old_work/screens/practice_26_7_24/buttons.dart';
 
 class StetesPractice extends StatefulWidget {
   const StetesPractice({super.key});
