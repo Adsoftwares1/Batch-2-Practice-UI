@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myclassprojectpractice/controllers/authentication_updated_with_provider/authentication_controller_with_provider.dart';
+import 'package:myclassprojectpractice/controllers/get_api_with_provider/get_api_with_provider.dart';
 import 'package:myclassprojectpractice/controllers/statemenagement_contollers/statemenagement_controller.dart';
 import 'package:myclassprojectpractice/old_work/APIs/get_api_without_model.dart';
 import 'package:myclassprojectpractice/old_work/APIs/practice_8_12_2024/api_hit_screen.dart';
@@ -22,6 +23,7 @@ import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/home_s
 import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/login_screen1.dart';
 import 'package:myclassprojectpractice/view/screens/authentication_screens/login_screens/login_screen.dart';
 import 'package:myclassprojectpractice/view/screens/authentication_updated_with_provider/login_screen_with_provider.dart';
+import 'package:myclassprojectpractice/view/screens/get_api_with_provider/get_api_with_provider.dart';
 import 'package:myclassprojectpractice/view/screens/statememenagement/statemenagement1.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -47,6 +49,7 @@ class MyApp extends StatelessWidget {
       providers: [
       ChangeNotifierProvider(create: (context) => StatemenagementContoller()),
       ChangeNotifierProvider(create: (context) => AuthenticatioController()),
+      ChangeNotifierProvider(create: (context) => GetApiWithProviderController()),
     ], child: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -55,7 +58,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreenWithProvider(),
+      home: GetApiWithProviderScreen(),
       //prefObj.getBool("isLogin") != null && prefObj.getBool("isLogin") == true ? HomeScreen3() : LoginScreen2(),
       
     ),);
