@@ -1,7 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:myclassprojectpractice/controllers/authentication_updated_with_provider/authentication_controller_with_provider.dart';
+import 'package:myclassprojectpractice/controllers/firebase_work_controller/firebase_crude_controller.dart';
 import 'package:myclassprojectpractice/controllers/get_api_with_provider/get_api_with_provider.dart';
 import 'package:myclassprojectpractice/controllers/statemenagement_contollers/statemenagement_controller.dart';
+import 'package:myclassprojectpractice/firebase_options.dart';
 import 'package:myclassprojectpractice/old_work/APIs/get_api_without_model.dart';
 import 'package:myclassprojectpractice/old_work/APIs/practice_8_12_2024/api_hit_screen.dart';
 import 'package:myclassprojectpractice/old_work/APIs/practice_8_13_2024/login_screen_4.dart';
@@ -23,6 +26,7 @@ import 'package:myclassprojectpractice/old_work/screens/practice_31_7_2024/login
 import 'package:myclassprojectpractice/old_work/screens/practice_8_1_2024/google_fonts.dart';
 import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/home_screen.dart';
 import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/login_screen1.dart';
+import 'package:myclassprojectpractice/view/firebase_work/firestore_crud_operations.dart';
 import 'package:myclassprojectpractice/view/screens/authentication_screens/login_screens/login_screen.dart';
 import 'package:myclassprojectpractice/view/screens/authentication_updated_with_provider/login_screen_with_provider.dart';
 import 'package:myclassprojectpractice/view/screens/get_api_with_provider/get_api_with_provider.dart';
@@ -34,6 +38,11 @@ late SharedPreferences prefObj;
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
+
   prefObj = await SharedPreferences.getInstance();
   print("this is the value of login in main : ${prefObj.getBool("isLogin")}");
   runApp(const MyApp());
@@ -52,6 +61,7 @@ class MyApp extends StatelessWidget {
       ChangeNotifierProvider(create: (context) => StatemenagementContoller()),
       ChangeNotifierProvider(create: (context) => AuthenticatioController()),
       ChangeNotifierProvider(create: (context) => GetApiWithProviderController()),
+      ChangeNotifierProvider(create: (context) => FirebaseCrudeController()),
     ], child: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -60,7 +70,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SharedPref(),
+      home: FireStoreCrudOperation(),
       //prefObj.getBool("isLogin") != null && prefObj.getBool("isLogin") == true ? HomeScreen3() : LoginScreen2(),
       
     ),);

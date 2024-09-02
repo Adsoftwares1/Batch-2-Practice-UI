@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "422146735169",
+    "firebase_url": "https://batch2-project-default-rtdb.firebaseio.com",
+    "project_id": "batch2-project",
+    "storage_bucket": "batch2-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422146735169:android:c9e0d1e5e93444a6855ac0",
+        "android_client_info": {
+          "package_name": "com.example.myclassprojectpractice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOah2IcH_ILy9O6yHmKUg4IVGL-rimYTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
