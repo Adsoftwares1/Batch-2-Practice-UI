@@ -26,6 +26,7 @@ import 'package:myclassprojectpractice/old_work/screens/practice_31_7_2024/login
 import 'package:myclassprojectpractice/old_work/screens/practice_8_1_2024/google_fonts.dart';
 import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/home_screen.dart';
 import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/login_screen1.dart';
+import 'package:myclassprojectpractice/view/firebase_work/authentication/login_with_email_and_password.dart';
 import 'package:myclassprojectpractice/view/firebase_work/firestore_crud_operations.dart';
 import 'package:myclassprojectpractice/view/screens/authentication_screens/login_screens/login_screen.dart';
 import 'package:myclassprojectpractice/view/screens/authentication_updated_with_provider/login_screen_with_provider.dart';
@@ -70,7 +71,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: FireStoreCrudOperation(),
+      home: AuthenticationLogin(),
       //prefObj.getBool("isLogin") != null && prefObj.getBool("isLogin") == true ? HomeScreen3() : LoginScreen2(),
       
     ),);
