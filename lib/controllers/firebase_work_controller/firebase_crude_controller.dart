@@ -12,7 +12,18 @@ class FirebaseCrudeController extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> storeDataInFirestore(Map<String, dynamic> myData, BuildContext context) async {
+
+bool _isLoadingUpdate = false;
+  // getter function
+  bool get isLoadingUpdate => _isLoadingUpdate;
+  // setter function
+  set SetLoadingUpdate(value) {
+    _isLoadingUpdate = value;
+    notifyListeners();
+  }
+
+  Future<void> storeDataInFirestore(
+      Map<String, dynamic> myData, BuildContext context) async {
     SetLoading = true;
 
     try {
@@ -22,13 +33,31 @@ class FirebaseCrudeController extends ChangeNotifier {
 
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text("Sucess")));
-          SetLoading = false;
+      SetLoading = false;
     } catch (e) {
       SetLoading = false;
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text("Error: $e")));
     }
-
-    
   }
+
+  Future<void> updateDataInFirestore(Map<String, dynamic> data, BuildContext context) async {
+    var firestoreObject = FirebaseFirestore.instance;
+SetLoadingUpdate = true;
+    try {
+      await firestoreObject
+          .collection("users")
+          .doc("DTvQ2GZx6pPdAqWAKF9W")
+          .update(data);
+          ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Update Sucess")));
+    } catch (e) {
+      SetLoadingUpdate = false;
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Error: $e")));
+    }
+    SetLoadingUpdate = false;
+  }
+
+  
 }
