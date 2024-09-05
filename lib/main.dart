@@ -28,6 +28,7 @@ import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/home_s
 import 'package:myclassprojectpractice/old_work/screens/practice_8_3_2024/login_screen1.dart';
 import 'package:myclassprojectpractice/view/firebase_work/authentication/login_with_email_and_password.dart';
 import 'package:myclassprojectpractice/view/firebase_work/firestore_crud_operations.dart';
+import 'package:myclassprojectpractice/view/firebase_work/upload_image_firebase_storage/store_image_firebase_storage.dart';
 import 'package:myclassprojectpractice/view/screens/authentication_screens/login_screens/login_screen.dart';
 import 'package:myclassprojectpractice/view/screens/authentication_updated_with_provider/login_screen_with_provider.dart';
 import 'package:myclassprojectpractice/view/screens/get_api_with_provider/get_api_with_provider.dart';
@@ -71,7 +72,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AuthenticationLogin(),
+      home: Store_Image_Firebase_Storage(),
       //prefObj.getBool("isLogin") != null && prefObj.getBool("isLogin") == true ? HomeScreen3() : LoginScreen2(),
       
     ),);
