@@ -13,7 +13,20 @@
           "package_name": "com.example.myclassprojectpractice"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "422146735169-h7ff22544uae4fkdck9t85gvnnf0ojm2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myclassprojectpractice",
+            "certificate_hash": "ad581cc2dbfe308b5282c34616cc69903a777b1c"
+          }
+        },
+        {
+          "client_id": "422146735169-qi9n3gmtvtvpq3g8unnn1cvsvgorptbm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAOah2IcH_ILy9O6yHmKUg4IVGL-rimYTw"
@@ -21,7 +34,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422146735169-qi9n3gmtvtvpq3g8unnn1cvsvgorptbm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "422146735169-l9rkc23k1chq121dtqordcbrt8umelln.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.myclassprojectpractice"
+              }
+            }
+          ]
         }
       }
     }
